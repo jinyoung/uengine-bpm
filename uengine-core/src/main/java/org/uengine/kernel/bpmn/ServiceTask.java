@@ -8,13 +8,13 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.ssl.TrustStrategy;
 import org.metaworks.dwr.MetaworksRemoteService;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.expression.ExpressionParser;
-import org.springframework.expression.common.TemplateParserContext;
-import org.springframework.expression.spel.standard.SpelExpressionParser;
-import org.springframework.expression.spel.support.StandardEvaluationContext;
+//import org.springframework.cloud.client.ServiceInstance;
+//import org.springframework.cloud.client.discovery.DiscoveryClient;
+//import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+//import org.springframework.expression.ExpressionParser;
+//import org.springframework.expression.common.TemplateParserContext;
+// import org.springframework.expression.spel.standard.SpelExpressionParser;
+// import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.http.*;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.converter.StringHttpMessageConverter;
@@ -82,20 +82,20 @@ public class ServiceTask extends DefaultActivity {
                 if (serviceId == null)
                     serviceId = role.getName();
 
-                LoadBalancerClient loadBalancerClient = MetaworksRemoteService.getInstance().getComponent(LoadBalancerClient.class);
+                // LoadBalancerClient loadBalancerClient = MetaworksRemoteService.getInstance().getComponent(LoadBalancerClient.class);
 
-                DiscoveryClient discoveryClient = MetaworksRemoteService.getInstance().getComponent(DiscoveryClient.class);
-                List<String> services = discoveryClient.getServices();
+                // DiscoveryClient discoveryClient = MetaworksRemoteService.getInstance().getComponent(DiscoveryClient.class);
+                // List<String> services = discoveryClient.getServices();
 
-                if (loadBalancerClient != null) {
-                    ServiceInstance serviceInstance = loadBalancerClient.choose(serviceId);
+                // if (loadBalancerClient != null) {
+                //     ServiceInstance serviceInstance = loadBalancerClient.choose(serviceId);
 
-                    if (serviceInstance != null) {
-                        String baseUrl = serviceInstance.getUri().toString();
+                //     if (serviceInstance != null) {
+                //         String baseUrl = serviceInstance.getUri().toString();
 
-                        fullURITemplate = baseUrl + (getUriTemplate().startsWith("/") ? getUriTemplate() : "/" + getUriTemplate());
-                    }
-                }
+                //         fullURITemplate = baseUrl + (getUriTemplate().startsWith("/") ? getUriTemplate() : "/" + getUriTemplate());
+                //     }
+                // }
             }
         }
 

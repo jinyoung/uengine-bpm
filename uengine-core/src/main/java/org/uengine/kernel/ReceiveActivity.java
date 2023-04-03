@@ -7,7 +7,7 @@ package org.uengine.kernel;
 import java.io.Serializable;
 import java.util.*;
 
-import com.sun.org.apache.regexp.internal.RE;
+//import com.sun.org.apache.regexp.internal.RE;
 import org.metaworks.annotation.Face;
 import org.metaworks.annotation.Group;
 import org.metaworks.annotation.Hidden;

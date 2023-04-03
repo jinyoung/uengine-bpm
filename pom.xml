@@ -16,10 +16,6 @@
   <modules>
 	  <module>uengine-commons</module>
 	  <module>uengine-core</module>
-	  <module>uengine-resource-manager</module>
-	  <module>bpmn-model</module>
-	  <module>uengine-persistence-couchbase</module>
-	  <module>uengine-migrator</module>
   </modules>
 
 
